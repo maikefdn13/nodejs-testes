@@ -1,0 +1,16 @@
+version: "3"
+services:
+    database:
+        image: postgres:11
+        container_name: dbtestes
+        environment:
+            POSTGRES_PASSWORD: docker
+            POSTGRES_USER: docker
+            POSTGRES_DB: modulotestes
+        #volumes:
+        #    - ./database/pgdata:/var/lib/postgresql/data
+        restart: always
+        ports:
+          - "5432:5432"
+   
+   
